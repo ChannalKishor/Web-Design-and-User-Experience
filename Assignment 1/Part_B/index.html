@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="media/images/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Student Travel Agency</title>
+  </head>
+  <body>
+    <!-- Header Block  -->
+    <header>
+      <h1>STUDENTS TRAVEL AGENCY</h1>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a
+              href="https://www.google.com/maps/d/embed?mid=1bPS3rWhee2c5JlxF0QP47H9WeZw&msa=0&ll=42.36536342504207%2C-71.03806999999999&spn=0.026762%2C0.053043&iwloc=0004e60003c554894e60a&output=embed&z=14"
+              >Locate Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- End Block  -->
+
+    <div class="container">
+      <!-- Section 1 Block -->
+      <section>
+        <!-- <h2 class="trial">Life’s too short for boring food</h2> -->
+        <h2>
+          <center>Book Your Flight</center>
+        </h2>
+        <div class="booking_container">
+          <div class="form">
+            <form>
+              <div class="input-details">
+                <div class="reservation_details">
+                  <span class="details">Full Name:</span>
+                  <input type="text" id="fname" name="fname" value="" /><br />
+                </div>
+
+                <div class="reservation_details">
+                  <span class="details">Flight Name:</span>
+                  <input type="text" id="lname" name="lname" value="" /><br />
+                </div>
+
+                <div class="reservation_details">
+                  <span class="details">Booking Date:</span>
+                  <input type="date" id="depart" />
+                </div>
+
+                <div class="reservation_details">
+                  <label for="slots">Seats</label> <br />
+                  <select name="slots">
+                    <option value="table1">1</option>
+                    <option value="table2">2</option>
+                    <option value="table3">3</option>
+                    <option value="table4">4</option>
+                  </select>
+                  <br />
+                </div>
+              </div>
+              <div class="button-container">
+                <button class="search-flight" type="submit">Purchase</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- End Block -->
+
+      <div class="wrapper">
+        <div class="divider div-transparent"></div>
+      </div>
+
+      <!-- Section 2 Block -->
+      <section class="images_section">
+        <h2><center>Check out our popular destinations</center></h2>
+        <!-- <h3>Popular Pastas</h3> -->
+        <div class="image_container">
+          <div class="card">
+            <div class="card-image1"></div>
+            <div class="card-text">
+              <span class="date"><b>San Francisco</b></span>
+              <p class="city_info">
+                San Francisco, one of America most vibrant cities, lures
+                individuals across the world because of its appealing beauty.
+                Therefore, millions of visitors leave their heart out there
+                after visiting San Francisco.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image2"></div>
+            <div class="card-text">
+              <span class="date"><b>Washington DC</b></span>
+              <p class="city_info">
+                One of the most visited cities in the USA, Washington, DC offers
+                a variety of interesting experiences, from learning about
+                American history and government to seeing many of the most
+                iconic sights in the country.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image3"></div>
+            <div class="card-text">
+              <span class="date"><b>New York</b></span>
+              <p class="city_info">
+                NYC has always attracted a diverse company of residents and
+                visitors, because of its unique ability to cater to the
+                interests of everyone – lovers of theater, art, history,
+                fashion, architecture, nature, food and music all conglomerate
+                in the roughly 33 square miles of Manhattan and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Block -->
+
+      <div class="wrapper">
+        <div class="divider div-transparent"></div>
+      </div>
+
+      <!-- Section 3 Block -->
+      <section class="videos_section">
+        <h2>Come Experience Best Service</h2>
+        <!-- <h3>
+          Enjoy extra sauce, extra cheese, and extra seasoning in our pasta
+        </h3> -->
+        <div class="video_container">
+          <div class="video">
+            <video controls>
+              <source src="media/videos/pasta1.mp4" type="video/mp4" />
+            </video>
+            <p>Our Mission</p>
+          </div>
+          <div class="video">
+            <video controls>
+              <source src="media/videos/pasta2.mp4" type="video/mp4" />
+            </video>
+            <p>Customer Experience</p>
+          </div>
+        </div>
+      </section>
+      <!-- End Block -->
+    </div>
+
+    <!-- Footer Block  -->
+    <footer>
+      <h6>Student Travel Agency © 2022</h6>
+    </footer>
+    <!-- End Block  -->
+  </body>
+</html>

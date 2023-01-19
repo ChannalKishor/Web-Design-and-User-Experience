@@ -1,0 +1,311 @@
+/* External Styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* General & Nav Bar block  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+  /* font-family: "Montserrat", sans-serif; */
+}
+
+li,
+a {
+  font-weight: 500;
+  font-size: 17px;
+  /* color: #edf0f1; */
+  color: black;
+  text-decoration: none;
+}
+
+section {
+  padding: 15px 10%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  /* background-color: #24252a; */
+  background-color: burlywood;
+}
+
+h1 {
+  cursor: pointer;
+  /* color: #e0b0a8; */
+  color: black;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 38px;
+  /* color: #ffffff; */
+  color: black;
+  font-weight: 500;
+}
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+h6 {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  /* color: #29c9b1; */
+  color: white
+}
+
+.wrapper {
+  padding-bottom: 10px;
+}
+
+.divider {
+  position: relative;
+  margin-top: 0px;
+  height: 1px;
+}
+
+.div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgb(48, 49, 51),
+    transparent
+  );
+}
+
+.div-arrow-down:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -7px;
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  background-color: white;
+  border-bottom: 1px solid rgb(48, 49, 51);
+  border-right: 1px solid rgb(48, 49, 51);
+}
+/* End block */
+
+.container {
+  background: linear-gradient(135deg, #68aab1, #f6b7d5);
+}
+
+.booking_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.form {
+  background-color: white;
+  width: 100%;
+  max-width: 750px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 35px 40px;
+  border-radius: 5px;
+}
+
+.booking_container .form .input-details {
+  display: flex;
+  flex: wrap;
+}
+
+.travel-details {
+  max-width: 100%;
+  width: calc(100% / 2-20px);
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-flight {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 15px;
+}
+
+.search-flight:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+input,
+select {
+  height: 45px;
+  width: 150px;
+}
+
+/* End Block  */
+
+/* Images section Block  */
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px;
+  grid-template-areas: "image" "text";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0 0 0 0.9);
+  text-align: center;
+  margin: 20px;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card-image1 {
+  grid-area: image;
+  background: url("media/images/ny1.jpeg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-image2 {
+  grid-area: image;
+  background: url("media/images/wcdc1.jpeg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-image3 {
+  grid-area: image;
+  background: url("media/images/ny1.jpeg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+/* End Block  */
+
+/* Videos Section Block  */
+
+.video_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+}
+
+video {
+  margin: 20px;
+  height: 300px;
+  width: 450px;
+}
+
+.video {
+  display: inline;
+}
+
+/* End Block  */
+
+.explore_block {
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  background-color: #24252a;
+  padding: 15px 10%;
+}
+
+/* About Section Page CSS  */
+
+audio {
+  margin: 10px;
+}
+
+.about_container {
+  position: fixed;
+  height: 100%;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.about_audio_container {
+  display: flex;
+}
+
+.about_section {
+  padding: 100px 320px;
+  max-height: 100%;
+}
+
+.about_skyscanner {
+  font-weight: 500;
+  font-size: 17px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+}
+/* End Block  */
