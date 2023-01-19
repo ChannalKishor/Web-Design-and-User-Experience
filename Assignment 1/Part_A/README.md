@@ -17,3 +17,4 @@ Following things were implemented:
 10. Button:              A button is included at the center of the page, where users can watch the experience of being customers. 
 
 
+Open the index.html file on vscode Run the application with live server (VS Code extension)
