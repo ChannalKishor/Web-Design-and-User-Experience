@@ -25,3 +25,4 @@ Things implemented
 8. Website is responsive.
 9. Used media queires.
 10. Added 'Resume section' which points to external public link.
+11. Hosted the website on Git pages.
