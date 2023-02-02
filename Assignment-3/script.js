@@ -184,9 +184,9 @@ function selectRow() {
         countBoxPresent++;
         row.style.backgroundColor = "yellow";
         row.lastElementChild.innerHTML =
-          "<td><button onClick='editRow(this)'>Edit Row</button></td>";
+          "<td><button onClick='editRow(this)'>Edit</button></td>";
         row.lastElementChild.previousElementSibling.innerHTML =
-          "<td><button onClick='deleteRow(this)'>Delete Row</button></td>";
+          "<td><button onClick='deleteRow(this)'>Delete</button></td>";
         document
           .querySelectorAll("tr")[0]
           .querySelectorAll("th")[8]
