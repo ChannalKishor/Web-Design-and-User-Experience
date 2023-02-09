@@ -1,92 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <title>Feedback</title>
-  <style>
-    label {	float: left;
-			width: 150px;}
-      #container{
-          width: 700px;
-          margin: auto;
-          background-color: beige;
-      } 
-      main{
-          padding: 50px;
+  <head>
+    <title>Feedback</title>
+    <style>
+      label {
+        float: left;
+        width: 150px;
       }
-  </style>
- </head>
- <body>
- <div id="container">
-	 
-	 <main>
-	 <h2>Feeback</h2>
-	 <h3>Love something? Hate something? Let us know!</h3>
-		 Note : Fields marked with an asterisk(*) are mandatory
-		 <br><br>
-		 <form method="post" novalidate>
-			<label>Title*:</label>
-			<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
-			<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
-			<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
-			<br><br>
-			<label for="firstName">First Name*:</label>
-			<input type="text" name="firstName" id="firstName" placeholder="First Name" />	
-			<br><br>
-			
+      #container {
+        width: 700px;
+        margin: auto;
+        background-color: beige;
+      }
+      main {
+        padding: 50px;
+      }
+      .dynamicCheckbox {
+        display: none;
+      }
 
-			<label for="lastName">Last Name*:</label>
-			<input type="text" name="lastName" id="lastName" placeholder="Last Name" />
-			<br><br>
-			
+      .textReason {
+        display: none;
+      }
+      table {
+        width: 1300px;
+        margin: auto;
+        text-align: left;
+      }
 
-			<label for="emailId">Email Id*:</label>
-			<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" />
-			<br><br>
-			
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
 
-			<label for="phoneNumber">Phone Number*:</label>
-			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" />
-			<br><br>
+      .table-header {
+        text-align: center;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h2>Feedback</h2>
+        <h3>Love something? Hate something? Let us know!</h3>
+        Note : Fields marked with an asterisk(*) are mandatory
+        <br /><br />
+        <form method="post" novalidate>
+          <label>Title*:</label>
+          <input
+            type="radio"
+            name="title"
+            id="miss"
+            value="miss"
+            required="required"
+          />Miss
+          <input
+            type="radio"
+            name="title"
+            id="mr"
+            value="mr"
+            required="required"
+          />Mr.
+          <input
+            type="radio"
+            name="title"
+            id="mrs"
+            value="mrs"
+            required="required"
+          />Mrs. <br /><br />
+          <label for="firstName">First Name*:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="First Name"
+          />
+          <br /><br />
 
-			<label for="streetAddress1">Street Address 1*:</label>
-			<input type="text" name="streetAddress1" id="streetAddress1" placeholder="address" />
-			<br><br>
+          <label for="lastName">Last Name*:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
+          />
+          <br /><br />
 
-			<label for="streetAddress2">Street Address 2:</label>
-			<input type="text" name="streetAddress2" id="streetAddress2" placeholder="address" />
-			<br><br>
+          <label for="emailId">Email Id*:</label>
+          <input
+            type="text"
+            name="emailId"
+            id="emailId"
+            placeholder="yourname@domain.com"
+          />
+          <br /><br />
 
-			<label for="city">City*:</label>
-			<input type="text" name="city" id="city" placeholder="city" />
-			<br><br>
+          <label for="phoneNumber">Phone Number*:</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="xxx-xxx-xxxx"
+          />
+          <br /><br />
 
-			<label for="state">State*:</label>
-			<input type="text" name="state" id="state" placeholder="state" />
-			<br><br>
-			
-            <label for="zipcode">ZipCode*:</label>
-			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
-			<br><br>
-             
-            <label for="zipcode">How did you hear*:</label>
-			<input type='checkbox' name="source" value="facebook" /> Facebook
-            <input type='checkbox' name="source" value="google" /> Google
-            <input type='checkbox' name="source" value="yelp" /> Yelp 
-			<br><br> 
-             
-			<label for="comments">Comments*:</label>
-			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
-			<br><br>
-			<input type="Submit">
-			<input type="Reset">
-			<br><br>
-		 </form>
-	 </main>
- </div>
+          <label for="streetAddress1">Street Address 1*:</label>
+          <input
+            type="text"
+            name="streetAddress1"
+            id="streetAddress1"
+            placeholder="address"
+          />
+          <br /><br />
 
- <script>
- 
- </script>
+          <label for="streetAddress2">Street Address 2:</label>
+          <input
+            type="text"
+            name="streetAddress2"
+            id="streetAddress2"
+            placeholder="address"
+          />
+          <br /><br />
 
- </body>
+          <label for="city">City*:</label>
+          <input type="text" name="city" id="city" placeholder="city" />
+          <br /><br />
+
+          <label for="state">State*:</label>
+          <input type="text" name="state" id="state" placeholder="state" />
+          <br /><br />
+
+          <label for="zipcode">ZipCode*:</label>
+          <input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+          <br /><br />
+
+          <label for="zipcode">How did you hear*:</label>
+          <input type="checkbox" name="source" value="facebook" /> Facebook
+          <input type="checkbox" name="source" value="google" /> Google
+          <input type="checkbox" name="source" value="yelp" /> Yelp <br /><br />
+
+          <label for="comments">Comments*:</label>
+          <textarea
+            name="text"
+            id="comments"
+            placeholder="Your comments"
+            rows="5"
+            cols="25"
+          ></textarea>
+          <br /><br />
+
+          <label for="rating">Rate our food*:</label>
+          <select name="rating" id="rating">
+            <option value="select">Select from 1 to 5</option>
+            <option value="5">5 star. Amazing.</option>
+            <option value="4">4 star. I loved it.</option>
+            <option value="3">3 star. It was ok.</option>
+            <option value="2">2 star. Can be better.</option>
+            <option value="1">1 star. Did'nt like it.</option>
+          </select>
+          <br /><br />
+          <div id="dynamicCheckbox" class="dynamicCheckbox"><br /><br /></div>
+
+          <div id="textReason" class="textReason">
+            <br />
+            <label for="ratingComment">Please give us your feeback*: </label>
+            <textarea
+              name="ratingComment"
+              id="ratingComment"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <br /><br />
+          </div>
+          <input type="Submit" />
+          <input type="Reset" />
+          <br /><br />
+        </form>
+      </main>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div class="table-container">
+      <h2 class="table-header">Feedback Data:</h2>
+      <br /><br />
+      <table id="tableData">
+        <tr>
+          <th>Name</th>
+          <th>Email ID</th>
+          <th>Phone Number</th>
+          <th>Street Address 1</th>
+          <th>Street Address 2</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip Code</th>
+          <th>Comments</th>
+          <th>Rating Selected</th>
+          <th>Rating Comment</th>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./script.js" />
+  </body>
 </html>
