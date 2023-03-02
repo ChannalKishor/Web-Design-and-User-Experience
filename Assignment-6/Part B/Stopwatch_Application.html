@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stopwatch in JS</title>
+    <style type="text/css">
+      :root {
+        --primary: rgb(40, 20, 220);
+        --dark: #282e36;
+        --darkdark: #111827;
+        --light: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Fira sans", sans-serif;
+      }
+
+      body {
+        background: var(--dark);
+        color: var(--light);
+      }
+
+      .watch {
+        text-align: center;
+        background-color: var(--darkdark);
+        width: 100%;
+        max-width: 360px;
+        margin: 4rem auto;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+      }
+
+      .stopwatch {
+        font-size: 5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+      .controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .controls button {
+        appearance: none;
+        background: none;
+        border: none;
+        outline: none;
+        user-select: none;
+        cursor: pointer;
+
+        color: var(--light);
+        font-size: 1.125rem;
+        background-color: var(--primary);
+        margin: 0 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+
+        transition: 0.4s;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        list-style: none;
+        padding: 10px 0;
+      }
+      .center-align {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Align center -->
+    <h1 class="center-align">Stopwatch Application</h1>
+    <h3 class="center-align">Please press buttons</h3>
+
+    <div class="watch">
+      <div class="stopwatch">00:00:00</div>
+
+      <div class="controls">
+        <button onclick="start()">Start Count</button>
+        <button onclick="pause()">Stop Count</button>
+        <button onclick="stop()">Reset Timer</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var ms = 0,
+        s = 0,
+        m = 0,
+        h = 0;
+      var timer;
+
+      var stopwatchEl = document.querySelector(".stopwatch");
+
+      function start() {
+        if (!timer) {
+          timer = setInterval(run, 1000);
+        }
+      }
+
+      function run() {
+        stopwatchEl.textContent = getTimer();
+        s++;
+        myDisplay();
+      }
+      async function myDisplay() {
+        let myPromise = new Promise(function (resolve, reject) {
+          if (s == 60) {
+            s = 0;
+            m++;
+          }
+          if (m == 60) {
+            s = 0;
+            m = 0;
+            h++;
+          }
+        });
+      }
+
+      function pause() {
+        stopTimer();
+      }
+
+      function stop() {
+        stopTimer();
+        s = 0;
+        s = 0;
+        m = 0;
+        h = 0;
+        stopwatchEl.textContent = getTimer();
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+        timer = false;
+      }
+
+      function getTimer() {
+        return (
+          (h < 10 ? "0" + h : h) +
+          ":" +
+          (m < 10 ? "0" + m : m) +
+          ":" +
+          (s < 10 ? "0" + s : s)
+        );
+      }
+
+      function restart() {
+        stop();
+        start();
+      }
+    </script>
+  </body>
+</html>

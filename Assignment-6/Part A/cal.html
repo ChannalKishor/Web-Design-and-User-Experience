@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>Calculator</title>
+  <script
+    type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  ></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Hello <span id="username"></span> !</h1>
+  <br /><br />
+  <form id="calForm">
+    <label>Enter First Number: </label>
+    <input type="text" id="num1" />
+    <div id="num1Error" style="display: none"></div>
+    <br /><br />
+
+    <label>Enter Second Number: </label>
+    <input type="text" id="num2" />
+    <div id="num2Error" style="display: none"></div>
+    <br /><br />
+
+    <input type="button" value="Addition: +" id="add" />
+    <input type="button" value="Subtraction: -" id="sub" />
+    <input type="button" value="Multiplication *" id="mul" />
+    <input type="button" value="Division /" id="div" />
+    <br /><br />
+
+    <label> Your Result:</label>
+    <input type="text" id="result" readonly />
+  </form>
+
+  <script src="cal_script.js"></script>
+</body>

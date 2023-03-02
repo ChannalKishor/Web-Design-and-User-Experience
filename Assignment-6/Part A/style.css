@@ -1,0 +1,86 @@
+/* Style the page header */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 50px;
+}
+
+/* Style the form */
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Style the labels */
+label {
+  display: inline-block;
+  width: 100px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Style the error messages */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #614caf;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the calculator buttons */
+input[type="button"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Style the add button */
+#add {
+  background-color: #ec9ba6;
+}
+
+/* Style the subtract button */
+#sub {
+  background-color: #ec9ba6;
+}
+
+/* Style the multiply button */
+#mul {
+  background-color: #ec9ba6;
+}
+
+/* Style the divide button */
+#div {
+  background-color: #ec9ba6;
+}
