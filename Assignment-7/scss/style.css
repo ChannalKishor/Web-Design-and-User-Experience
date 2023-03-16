@@ -1,0 +1,90 @@
+:root {
+  --first-color: #191970;
+  --second-color: lightblue;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  display: grid;
+  grid-template-areas: "header header header" "nav article ads" "nav footer footer";
+  grid-template-rows: 80px 1fr 70px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+}
+
+header,
+footer,
+div {
+  padding: 1.2em;
+  background-color: var(--first-color);
+}
+
+nav,
+div {
+  padding: 1.2em;
+  background-color: var(--second-color);
+}
+
+article,
+div {
+  padding: 1.2em;
+  background-color: white;
+}
+
+#pageHeader {
+  grid-area: header;
+}
+
+#pageFooter {
+  grid-area: footer;
+}
+
+#mainArticle {
+  grid-area: article;
+}
+
+#mainNav {
+  grid-area: nav;
+}
+
+#siteAds {
+  grid-area: ads;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body {
+    grid-template-areas: "header" "article" "ads" "nav" "footer";
+    grid-template-rows: 80px 1fr 80px 1fr 70px;
+    grid-template-columns: 1fr;
+  }
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+   list-style: none;
+}
+nav li {
+  display: block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: midnightblue;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

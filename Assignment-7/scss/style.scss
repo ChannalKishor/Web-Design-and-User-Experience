@@ -1,0 +1,140 @@
+:root {
+    //custom properties
+    --first-color: #191970;
+    --second-color: lightblue;
+}
+
+//variables 
+$font-stack: Arial, Helvetica, sans-serif;
+$light-color: #f4f4f4;
+
+//mixin
+@mixin headfootcolor {
+    background-color: var(--first-color);
+}
+
+@mixin articlenavcolor {
+    background-color: var(--second-color);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//function
+@function sum($numbers...) {
+    $sum: 0;
+
+    @each $number in $numbers {
+        $sum: $sum +$number;
+    }
+
+    @return $sum;
+}
+
+body {
+    background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1.2;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav article ads"
+        "nav footer footer";
+    grid-template-rows: sum(40px, 40px) 1fr 70px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+header,
+footer,
+div {
+    padding: 1.2em;
+    @include headfootcolor;
+}
+
+
+nav,
+div {
+    padding: 1.2em;
+    @include articlenavcolor;
+}
+
+article,
+div {
+    padding: 1.2em;
+    background-color: white;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+#siteAds {
+    grid-area: ads;
+}
+
+
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas:
+            "header"
+            "article"
+            "ads"
+            "nav"
+            "footer";
+        grid-template-rows: 80px 1fr 80px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@mixin interpolation($prop1, $prop2, $prop3) //interpolation
+
+    {
+
+    #{$prop1}: 0;
+    #{$prop2}: 0;
+    #{$prop3}: none;
+}
+
+nav {
+    ul {
+        @include interpolation("margin", "padding", " list-style");
+    }
+
+    li {
+        display: block;
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+nav a:hover {
+    background-color: midnightblue;
+    color: white;
+}
